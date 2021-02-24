@@ -15,7 +15,7 @@
    version="1.1"
    id="svg1517"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="sun_rise.svg">
+   sodipodi:docname="sun.svg">
   <defs
      id="defs1511" />
   <sodipodi:namedview
@@ -26,10 +26,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.64"
-     inkscape:cx="275.17681"
-     inkscape:cy="117.40335"
+     inkscape:cx="150.78218"
+     inkscape:cy="173.42274"
      inkscape:document-units="mm"
-     inkscape:current-layer="g827"
+     inkscape:current-layer="g845"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -66,27 +66,26 @@
        r="89.202377" />
   </g>
   <g
-     inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="Set"
-     style="display:none">
-    <path
-       transform="translate(-47.625016,-24.101196)"
-       style="display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 126.89315,57.204418 v 64.965722 h -17.33561 l 27.26986,47.23259 27.26984,-47.23259 H 149.78103 V 57.204418 Z"
-       id="rect846"
-       inkscape:connector-curvature="0" />
-  </g>
-  <g
      inkscape:label="Rise"
      id="g827"
      inkscape:groupmode="layer"
      style="display:none">
     <path
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 89.202381,34.029262 c -9.93979,15.485702 -19.87958,30.971407 -29.81937,46.45711 5.254461,0 10.508919,0 15.76338,0 0,21.296378 0,42.592748 0,63.889118 9.370661,0 18.741318,0 28.111979,0 0,-21.29637 0,-42.59274 0,-63.889118 5.25445,0 10.50892,0 15.76337,0 C 109.08195,65.000669 99.14217,49.514964 89.202381,34.029262 Z"
+       id="rect835"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     style="display:inline"
+     inkscape:groupmode="layer"
+     id="g845"
+     inkscape:label="Set">
+    <path
        inkscape:connector-curvature="0"
-       id="path825"
-       d="M 79.268134,145.30153 V 80.335812 h -17.33561 l 27.26986,-47.23259 27.269836,47.23259 h -14.31621 v 64.965718 z"
-       style="display:inline;opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+       id="path843"
+       d="m 89.202381,144.37549 c -9.93979,-15.4857 -19.87958,-30.97141 -29.81937,-46.45711 5.254461,0 10.508919,0 15.76338,0 0,-21.296378 0,-42.592748 0,-63.889118 9.370661,0 18.741318,0 28.111979,0 0,21.29637 0,42.59274 0,63.889118 5.25445,0 10.50892,0 15.76337,0 -9.93979,15.4857 -19.87957,30.97141 -29.819359,46.45711 z"
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
   </g>
   <g
      inkscape:groupmode="layer"
