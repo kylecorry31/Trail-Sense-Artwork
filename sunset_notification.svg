@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="178.40475mm"
+   height="178.40475mm"
+   viewBox="0 0 178.40475 178.40475"
+   version="1.1"
+   id="svg1517"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="sunset_notification.svg">
+  <defs
+     id="defs1511" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.64"
+     inkscape:cx="318.74125"
+     inkscape:cy="145.92457"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1514">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Sun"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-47.625015,-24.101196)"
+     style="display:inline">
+    <path
+       style="opacity:1;fill:#ffdd55;fill-opacity:1;stroke:none;stroke-width:1.99999988;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 337.14258 0 A 337.14284 337.14284 0 0 0 0 337.14258 A 337.14284 337.14284 0 0 0 337.14258 674.28516 A 337.14284 337.14284 0 0 0 674.28516 337.14258 A 337.14284 337.14284 0 0 0 337.14258 0 z M 299.5957 125.11523 L 386.10156 125.11523 L 386.10156 370.6543 L 440.21094 370.6543 L 337.14258 549.17188 L 234.07617 370.6543 L 299.5957 370.6543 L 299.5957 125.11523 z "
+       transform="matrix(0.26458333,0,0,0.26458333,47.625015,24.101196)"
+       id="path2062" />
+  </g>
+</svg>
