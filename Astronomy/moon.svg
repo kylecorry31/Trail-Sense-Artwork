@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.22627417"
-     inkscape:cx="1603.6355"
+     inkscape:cx="865.5928"
      inkscape:cy="1789.9823"
      inkscape:document-units="mm"
      inkscape:current-layer="g850"
@@ -133,7 +133,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="Rise"
-     style="display:inline">
+     style="display:none">
     <path
        inkscape:connector-curvature="0"
        id="path843"
@@ -176,7 +176,7 @@
        inkscape:connector-curvature="0" />
   </g>
   <g
-     style="display:none;opacity:0.6"
+     style="display:inline;opacity:0.6"
      inkscape:label="Waning Gibbous"
      id="g2200"
      inkscape:groupmode="layer">
