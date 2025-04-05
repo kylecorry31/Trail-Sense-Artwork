@@ -1,7 +1,6 @@
 from PIL import Image, ImageEnhance, ImageFilter
 import numpy as np
 import sys
-import os
 
 def add_vintage_effect(image_path, output_path):
     # Load image
@@ -70,22 +69,4 @@ if __name__ == "__main__":
     input_path = sys.argv[1]
     output_path = sys.argv[2]
 
-    
-    # Check if input is a directory
-    if os.path.isdir(input_path):
-        if not os.path.exists(output_path):
-            os.makedirs(output_path)
-            
-        # Process all images in directory
-        image_extensions = ['.jpg', '.jpeg', '.png', '.bmp', '.tiff', '.webp']
-        for filename in os.listdir(input_path):
-            if any(filename.lower().endswith(ext) for ext in image_extensions):
-                input_file = os.path.join(input_path, filename)
-                output_file = os.path.join(output_path, filename)
-                try:
-                    add_vintage_effect(input_file, output_file)
-                except Exception as e:
-                    print(f"Error processing {filename}: {e}")
-    else:
-        # Process single file
-        add_vintage_effect(input_path, output_path)
+    add_vintage_effect(input_path, output_path)
