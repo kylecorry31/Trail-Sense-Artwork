@@ -42,18 +42,18 @@ def add_vintage_effect(image_path, output_path):
     # Add subtle noise/grain
     # Generate noise once and repeat it for all channels
     width, height = faded.size
-    noise = np.random.normal(0, 10, width * height).reshape((height, width))
+    noise = np.random.normal(0, 5, width * height).reshape((height, width))
     noise_rgb = np.stack([noise, noise, noise], axis=2)    
     noisy_image = np.array(faded) + noise_rgb
     noisy_image = np.clip(noisy_image, 0, 255).astype(np.uint8)
     final_img = Image.fromarray(noisy_image)
 
     # Revert all pure white pixels from the original back to pure white
-    # original_pixels = np.array(img)
-    # final_pixels = np.array(final_img)
-    # mask = np.all(original_pixels == [255, 255, 255], axis=-1)
-    # final_pixels[mask] = [255, 255, 255]
-    # final_img = Image.fromarray(final_pixels)
+    original_pixels = np.array(img)
+    final_pixels = np.array(final_img)
+    mask = np.all(original_pixels == [255, 255, 255], axis=-1)
+    final_pixels[mask] = [255, 255, 255]
+    final_img = Image.fromarray(final_pixels)
 
     final_img = final_img.convert("RGB")  # Remove alpha for saving
 
