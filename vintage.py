@@ -1,8 +1,9 @@
 from PIL import Image, ImageEnhance, ImageFilter
 import numpy as np
 import sys
+import argparse
 
-def add_vintage_effect(image_path, output_path):
+def add_vintage_effect(image_path, output_path, sepia_amount=0.5, noise_amount=5, preserve_white=True):
     # Load image
     img = Image.open(image_path).convert("RGB")
 
@@ -36,37 +37,47 @@ def add_vintage_effect(image_path, output_path):
     enhancer = ImageEnhance.Contrast(faded)
     faded = enhancer.enhance(0.85)
 
-    # Blend sepia image
-    faded = Image.blend(faded, img, alpha=0.5)
+    # Blend sepia image (using configurable sepia amount)
+    faded = Image.blend(faded, img, alpha=1-sepia_amount)
 
-    # Add subtle noise/grain
-    # Generate noise once and repeat it for all channels
+    # Add subtle noise/grain with configurable amount
     width, height = faded.size
-    noise = np.random.normal(0, 5, width * height).reshape((height, width))
+    noise = np.random.normal(0, noise_amount, width * height).reshape((height, width))
     noise_rgb = np.stack([noise, noise, noise], axis=2)    
     noisy_image = np.array(faded) + noise_rgb
     noisy_image = np.clip(noisy_image, 0, 255).astype(np.uint8)
     final_img = Image.fromarray(noisy_image)
 
-    # Revert all pure white pixels from the original back to pure white
-    original_pixels = np.array(img)
-    final_pixels = np.array(final_img)
-    mask = np.all(original_pixels == [255, 255, 255], axis=-1)
-    final_pixels[mask] = [255, 255, 255]
-    final_img = Image.fromarray(final_pixels)
+    # Optionally preserve white pixels
+    if preserve_white:
+        original_pixels = np.array(img)
+        final_pixels = np.array(final_img)
+        mask = np.all(original_pixels == [255, 255, 255], axis=-1)
+        final_pixels[mask] = [255, 255, 255]
+        final_img = Image.fromarray(final_pixels)
 
     final_img = final_img.convert("RGB")  # Remove alpha for saving
 
     final_img.save(output_path)
     print(f"Saved vintage image to {output_path}")
 
-# Read the path from the CLI args
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Usage: python vintage.py <input_path> <output_path>")
-        sys.exit(1)
-
-    input_path = sys.argv[1]
-    output_path = sys.argv[2]
-
-    add_vintage_effect(input_path, output_path)
+    parser = argparse.ArgumentParser(description='Apply vintage effect to an image')
+    parser.add_argument('input_path', help='Path to input image')
+    parser.add_argument('output_path', help='Path for output image')
+    parser.add_argument('--sepia', type=float, default=0.5, 
+                        help='Amount of sepia effect (0.0-1.0, default: 0.5)')
+    parser.add_argument('--noise', type=float, default=5.0,
+                        help='Amount of noise/grain (default: 5.0)')
+    parser.add_argument('--no-preserve-white', action='store_false', dest='preserve_white',
+                        help='Disable preserving white pixels from the original image')
+    
+    args = parser.parse_args()
+    
+    add_vintage_effect(
+        args.input_path,
+        args.output_path,
+        sepia_amount=args.sepia,
+        noise_amount=args.noise,
+        preserve_white=args.preserve_white
+    )
