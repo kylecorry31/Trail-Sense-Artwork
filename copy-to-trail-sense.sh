@@ -25,10 +25,10 @@ cp "$INPUT_IMAGE" "$DEST_PATH"
 echo "Copied to $DEST_PATH"
 
 # Step 2: Apply filters
-python blend-lines.py "$DEST_PATH" "$DEST_PATH"
+python blend-lines.py "$DEST_PATH" "$DEST_PATH" --black-value 50 --white-value 230 --saturation 0.3
 echo "Blended lines on $DEST_PATH"
 
-python vintage.py "$DEST_PATH" "$DEST_PATH"
+python vintage.py "$DEST_PATH" "$DEST_PATH" --sepia 0.5 --noise 5
 echo "Applied vintage filter on $DEST_PATH"
 
 # Step 3: Change working dir and convert to webp
