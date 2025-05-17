@@ -34,7 +34,7 @@ echo "Applied vintage filter on $DEST_PATH"
 
 # Step 3: Change working dir and convert to webp
 pushd ../Trail-Sense/scripts > /dev/null
-python convert_to_webp.py "$RELATIVE_DEST_PATH"
+python convert_to_webp.py "$RELATIVE_DEST_PATH" # 600 600
 echo "Converted to WEBP"
 
 # Step 4: Run replace-image.py
